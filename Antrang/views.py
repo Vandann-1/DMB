@@ -92,3 +92,4 @@ def parti(request):
 
 
 
+#rudra
