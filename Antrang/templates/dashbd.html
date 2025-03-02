@@ -1,18 +1,71 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unique Experience</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background:black
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            max-width: 650px;
+            transition: 0.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            background:rgb(12, 12, 1)
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .cta-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff007f, #00f7ff);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.6);
+        }
+        .cta-btn:hover {
+            background:yellow
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.6);
+        }
+    </style>
 </head>
 <body>
-    <h2>DashBoard </h2>
-    <a href="{% url 'dept'%}"> Department</a>
-    <a href="{% url 'course'%}"> Course</a>
-    <a href="{% url 'students'%}"> student</a>
-    <a href="{% url 'event'%}"> event</a>
-    <a href="{% url 'parti'%}"> Participant</a>
-    
-
+    <div class="container">
+        <!-- <h1>Unleash Uniqueness</h1> -->
+        <p>Step into  event and explore more .</p>
+        <a href="{% url 'dept' %}" class="cta-btn">add event details</a>
+    </div>
 </body>
 </html>
