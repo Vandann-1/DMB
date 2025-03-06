@@ -92,4 +92,4 @@ def parti(request):
 
 
 
-#rudra
+#rudra bhai
